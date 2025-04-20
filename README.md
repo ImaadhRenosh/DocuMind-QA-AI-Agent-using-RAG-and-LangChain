@@ -1,4 +1,5 @@
-# DocuMind-QA-AI-Agent-using-RAG-and-LangChain
+# IBM AI engineering Professional Certified Capstone Project:
+# DocuMind-RAG based Question and Answer -AI-Agent-using-IBM Watsonx.ai-and-LangChain
 
 ## Table of Contents
 - [Overview](#overview)
