@@ -1,5 +1,5 @@
 # IBM AI engineering Professional Certified Capstone Project:
-# DocuMind-RAG based Question and Answer -AI-Agent-using-IBM Watsonx.ai-and-LangChain
+# DocuMind-RAG: AI QA Agent with LangChain & Watsonx.ai
 
 ## Table of Contents
 - [Overview](#overview)
@@ -57,13 +57,27 @@ To set up and run the project locally:
 
 2. **Install Dependencies**:
     ```sh
-    pip install -r requirements.txt
+    pip install virtualenv 
+    virtualenv my_env # create a virtual environment named my_env
+    source my_env/bin/activate # activate my_env
+
+
+    # installing necessary pacakges in my_env
+    python3.11 -m pip install \
+    gradio==4.44.0 \
+    ibm-watsonx-ai==1.1.2  \
+    langchain==0.2.11 \
+    langchain-community==0.2.10 \
+    langchain-ibm==0.1.11 \
+    chromadb==0.4.24 \
+    pypdf==4.3.1 \
+    pydantic==2.9.1
     ```
 
 3. **Run the Application**:
     Launch the Gradio interface:
     ```sh
-    python app.py
+    python qabot.pyx
     ```
 
 ## Usage
