@@ -142,3 +142,6 @@ https://huggingface.co/spaces/YourUsername/pdf-qa-agent
 - **Logging**: Extend backend to log Q&A sessions  
 
 ---
+
+<img width="729" alt="Screenshot 2025-04-24 at 18 29 27" src="https://github.com/user-attachments/assets/f2907a04-f9c6-487c-a126-d1d861a74803" />
+
