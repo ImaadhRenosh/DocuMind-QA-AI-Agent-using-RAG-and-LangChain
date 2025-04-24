@@ -1,121 +1,118 @@
-# IBM AI engineering Professional Certified Capstone Project:
-# DocuMind-RAG: AI QA Agent with LangChain & Watsonx.ai
+# AI-Powered PDF QA Bot with IBM Watsonx, LangChain & Gradio
 
-## Table of Contents
-- [Overview](#overview)
-- [Project Aim](#project-aim)
-- [Technologies Used](#technologies-used)
-- [Prerequisites](#prerequisites)
-- [Installation & How to Run](#installation--how-to-run)
-- [Usage](#usage)
-- [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
+This repository showcases a production-ready, interactive QA bot that allows users to upload PDF files and ask questions about their content. It's powered by IBM Watsonx foundation models, LangChain, and served through a sleek Gradio interface.
 
-## Overview
-The DocuMind QA AI Agent is the capstone project of the IBM AI Engineering Specialization, showcasing a fully integrated, production-level application. This AI-powered Question Answering (QA) bot is capable of reading PDF documents and answering natural language questions based on their content.
+---
 
-Designed for scenarios like navigating corporate knowledge bases, legal contracts, or technical manuals, the system provides fast and accurate information retrieval. It leverages LangChain to orchestrate a retrieval-augmented generation (RAG) pipeline and integrates the Mixtral 8x7B foundation model hosted on IBM Watsonx.ai for generating human-like answers. The bot turns static PDFs into dynamic, queryable sources of truth.
+## 🔧 Features
 
-The entire pipeline is wrapped in an intuitive Gradio interface, ensuring accessibility for both technical and non-technical users.
+- 📄 Upload and parse any PDF document
+- 🤖 Ask contextual questions and get instant answers
+- ⚡ Powered by IBM Watsonx LLM & Embeddings
+- 🧠 Uses ChromaDB for efficient vector storage
+- 🌐 Clean, user-friendly web interface via Gradio
 
-## Project Aim
-The goal of this project was to create a modular and scalable QA system that leverages document intelligence and state-of-the-art large language models.
+---
 
-Key features implemented:
-- **Document Loaders**: For parsing PDF content.
-- **Text Splitters**: To break down large documents into manageable chunks.
-- **Embedding Models**: To semantically encode text.
-- **Vector Store (FAISS)**: To enable efficient similarity-based retrieval.
-- **Retriever + WatsonxLLM**: To form a powerful RAG pipeline.
-- **Gradio Interface**: For interactive question answering.
+## 📁 Directory Structure
+```
+├── qabot.py
+├── assets/
+│   ├── upload_ui.png
+│   ├── question_ui.png
+│   └── answer_ui.png
+├── README.md
+└── requirements.txt
+```
 
-The system efficiently reads and reasons over large document sets with minimal latency, demonstrating the integration of LangChain, IBM Watsonx.ai, and Hugging Face models in a real-world AI application.
+---
 
-## Technologies Used
-- **Programming Language:** Python
-- **Libraries:** LangChain, Gradio, Hugging Face Transformers
-- **Tools:** IBM Watsonx.ai, FAISS, Jupyter Notebook
+## 🚀 Getting Started
 
-## Prerequisites
-- Python 3.x
-- LangChain
-- Gradio
-- Hugging Face Transformers
-- FAISS
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/pdf-qa-bot.git
+cd pdf-qa-bot
+```
 
-## Installation & How to Run
-To set up and run the project locally:
+### 2. Set Up a Virtual Environment
+```bash
+pip install virtualenv
+virtualenv my_env
+source my_env/bin/activate
+```
 
-1. **Clone the Repository**:
-    ```sh
-    git clone https://github.com/ImaadhRenosh/DocuMind-QA-AI-Agent-using-RAG-and-LangChain.git
-    cd DocuMind-QA-AI-Agent-using-RAG-and-LangChain
-    ```
+### 3. Install Dependencies
+```bash
+python3.11 -m pip install \
+  gradio==4.44.0 \
+  ibm-watsonx-ai==1.1.2 \
+  langchain==0.2.11 \
+  langchain-community==0.2.10 \
+  langchain-ibm==0.1.11 \
+  chromadb==0.4.24 \
+  pypdf==4.3.1 \
+  pydantic==2.9.1
+```
 
-2. **Install Dependencies**:
-    ```sh
-    pip install virtualenv 
-    virtualenv my_env # create a virtual environment named my_env
-    source my_env/bin/activate # activate my_env
+---
 
+## 🧠 About the Application Logic
 
-    # installing necessary pacakges in my_env
-    python3.11 -m pip install \
-    gradio==4.44.0 \
-    ibm-watsonx-ai==1.1.2  \
-    langchain==0.2.11 \
-    langchain-community==0.2.10 \
-    langchain-ibm==0.1.11 \
-    chromadb==0.4.24 \
-    pypdf==4.3.1 \
-    pydantic==2.9.1
-    ```
+### 1. PDF Parsing
+Using `PyPDFLoader` from LangChain Community, the PDFs are loaded and split into chunks of 1000 characters using `RecursiveCharacterTextSplitter`.
 
-3. **Run the Application**:
-    Launch the Gradio interface:
-    ```sh
-    python qabot.pyx
-    ```
+### 2. Embedding + Vector Store
+Chunks are embedded using `WatsonxEmbeddings` (Slate 125M model) and stored in `ChromaDB` for fast retrieval.
 
-## Usage
-After running the application:
-- Upload PDF documents.
-- Ask natural language questions based on the content of the documents.
-- Receive accurate, human-like answers.
+### 3. Retrieval-Based QA
+We use LangChain’s `RetrievalQA` chain that combines the retriever with `WatsonxLLM` (Mixtral 8x7B) for inference.
 
-## Demo
-### Main Components:
-- **Document Loaders**: Parsing PDF content for downstream processing.
-- **Text Splitting**: Breaking down large documents into manageable chunks.
-- **Embedding Models**: Encoding document content semantically for efficient retrieval.
-- **FAISS Vector Store**: Storing embeddings and enabling similarity search.
-- **Gradio UI**: Providing an interactive interface for users.
+---
 
-### Workflow:
-1. Upload your PDF document.
-2. The system parses the document and splits it into chunks.
-3. Chunks are semantically encoded using embedding models.
-4. The FAISS vector store retrieves relevant chunks based on user queries.
-5. WatsonxLLM generates accurate, natural language answers.
+## 🖥️ Running the App
 
-## Contributing
-Contributions are welcome! If you’d like to improve this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch.
-4. Open a pull request detailing your changes.
+### Run the bot
+```bash
+python qabot.py
+```
+Then open `http://127.0.0.1:7860` in your browser.
 
-## License
-This project is licensed under © IBM Corporation. All rights reserved.
+---
 
-## Acknowledgements
-- Thanks to the contributors of LangChain, Gradio, Hugging Face Transformers, and FAISS.
-- Special thanks to IBM Watsonx.ai for providing the foundation models.
+## 📸 Screenshots
 
-## Contact
-For any questions or suggestions, feel free to reach out:
-- **Email:** imaadhrenosh@gmail.com
-- **LinkedIn profile**: [LinkedIn profile](https://www.linkedin.com/in/imaadh-renosh-007aba348)
+### 1. Upload PDF
+![Upload PDF](assets/upload_ui.png)
+
+### 2. Ask Questions
+![Question UI](assets/question_ui.png)
+
+### 3. Receive Answers
+![Answer UI](assets/answer_ui.png)
+
+---
+
+## 🤝 How Clients Can Use This
+- Can be deployed as a private/internal document analysis tool
+- Fine-tune on custom PDFs for personalized Q&A
+- Embed into websites with iframe or Gradio share link
+
+---
+
+## 🧩 Integrations
+- **Cloud Deployment**: Can be containerized with Docker
+- **Multi-user Support**: Extend with user authentication
+- **Logging**: Add backend logging for questions/answers
+
+---
+
+## 🧠 About Me
+Hi, I'm Mohammed Imaadh Renosh — an aspiring AI/ML engineer who’s passionate about real-world applications of LLMs. This project reflects my commitment to building production-grade, client-ready AI solutions. Feel free to reach out or collaborate!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/imaadhrenosh)
+
+---
+
+## 📄 License
+MIT License
