@@ -1,3 +1,5 @@
+# IBM AI engineering Professional Certified Project:
+# Final Capstone Project of the entire IBM AI Engineering Professional Specialization
 # AI-Powered PDF QA AI-Agent with IBM Watsonx, LangChain & Gradio
 
 This repository showcases a production-ready, interactive QA bot that allows users to upload PDF files and ask questions about their content. It's powered by IBM Watsonx foundation models, LangChain, and served through a sleek Gradio interface.
