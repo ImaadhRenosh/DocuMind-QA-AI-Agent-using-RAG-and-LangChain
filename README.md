@@ -71,6 +71,14 @@ We use LangChain’s `RetrievalQA` chain that combines the retriever with `Watso
 
 ---
 
+## 📘 Full Guide to Building This AI Agent
+
+I’ve written a **complete guide** with every step, from setting up the environment to deploying the Gradio interface.
+
+Note : Once all steps above are followed, only then can you move on to the next section if you choose to Run the App locally
+
+> 📖 [Click here to access the full guide](https://your-link-here.com)
+
 ## 🖥️ Running the App
 
 ### ▶️ Run Locally
