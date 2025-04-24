@@ -153,5 +153,20 @@ https://huggingface.co/spaces/YourUsername/pdf-qa-agent
 
 ---
 
+## Contributing
+Contributions are welcome! If you’d like to improve this project, please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Open a pull request detailing your changes.
+
+## License
+This project is licensed under © IBM Corporation. All rights reserved.
+
+## Contact
+For any questions or suggestions, feel free to reach out:
+- **Email:** imaadhrenosh@gmail.com
+- **LinkedIn profile**: [LinkedIn profile](https://www.linkedin.com/in/imaadh-renosh-007aba348)
+
 <img width="681" alt="Screenshot 2025-04-24 at 18 30 37" src="https://github.com/user-attachments/assets/a5aa6611-476e-48f4-a000-dcd61e529dd1" />
 
