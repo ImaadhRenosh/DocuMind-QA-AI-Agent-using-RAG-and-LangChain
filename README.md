@@ -143,5 +143,5 @@ https://huggingface.co/spaces/YourUsername/pdf-qa-agent
 
 ---
 
-<img width="729" alt="Screenshot 2025-04-24 at 18 29 27" src="https://github.com/user-attachments/assets/f2907a04-f9c6-487c-a126-d1d861a74803" />
+<img width="681" alt="Screenshot 2025-04-24 at 18 30 37" src="https://github.com/user-attachments/assets/a5aa6611-476e-48f4-a000-dcd61e529dd1" />
 
