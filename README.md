@@ -76,7 +76,7 @@ We use LangChain’s `RetrievalQA` chain that combines the retriever with `Watso
 ```bash
 python qabot.py
 ```
-Then open `[AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/)` in your browser.
+Then open [AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/) in your browser.
 
 ---
 
