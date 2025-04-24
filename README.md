@@ -71,13 +71,15 @@ We use LangChain’s `RetrievalQA` chain that combines the retriever with `Watso
 
 ---
 
-## 📘 Full Guide to Building This AI Agent
+## 📘 Complete Build & Deployment Guide
 
-I’ve written a complete guide with every step, from setting up the environment to deploying the Gradio interface, refer to the [User Manual](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/User%20Manual%20_%20QA%20AI%20Agent%20creation%20guide.pdf) and follow all steps in the right order.
+I’ve created a comprehensive user manual that walks you through every step — from environment setup to launching the Gradio-powered interface.  
 
-Note : Once all steps above are followed, only then can you move on to the next section if you choose to run the App locally, otherwise the link for the AI agent in the browser won't open. 
+Please follow each step **in order** to ensure smooth execution and deployment.
 
-> 📖 [Click here to access the full guide](https://your-link-here.com)
+> ⚠️ **Important:** You must complete all setup steps before accessing the app via the browser. Skipping steps may result in a broken or non-functional link.
+
+> 📖 [Click here to open the Full User Manual](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/User%20Manual%20_%20QA%20AI%20Agent%20creation%20guide.pdf)
 
 ## 🖥️ Running the App
 
