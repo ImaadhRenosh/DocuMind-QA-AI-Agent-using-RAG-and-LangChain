@@ -83,7 +83,7 @@ Then open [AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-lab
 ## 📸 Screenshots
 
 ### 1. Upload PDF
-[![Download a pdf, for convenience here's a pdf you can download on your device](path/to/your/image.png)](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/testPDF_A_Comprehensive_Review_of_Low_Rank_Adaptation_in_Large_Language_Models_for_Efficient_Parameter_Tuning-1.pdf)
+[[Download a pdf, for convenience here's a pdf you can download on your device]](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/testPDF_A_Comprehensive_Review_of_Low_Rank_Adaptation_in_Large_Language_Models_for_Efficient_Parameter_Tuning-1.pdf)
 
 ### 2. Ask Questions
 <img width="1371" alt="Gradio Interface view" src="https://github.com/user-attachments/assets/6461aefb-98d4-46b7-9ba2-e8a524d9b77d" />
