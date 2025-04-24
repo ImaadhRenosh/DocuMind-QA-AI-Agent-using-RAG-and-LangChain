@@ -107,12 +107,4 @@ Then open [AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-lab
 
 ---
 
-## 🧠 About Me
-Hi, I'm Mohammed Imaadh Renosh — an aspiring AI/ML engineer who’s passionate about real-world applications of LLMs. This project reflects my commitment to building production-grade, client-ready AI solutions. Feel free to reach out or collaborate!
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/imaadhrenosh)
-
----
-
-## 📄 License
-MIT License
