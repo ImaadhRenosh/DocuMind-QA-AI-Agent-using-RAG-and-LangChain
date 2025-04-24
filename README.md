@@ -6,23 +6,24 @@ This repository showcases a production-ready, interactive QA bot that allows use
 
 ## 🔧 Features
 
-- 📄 Upload and parse any PDF document
-- 🤖 Ask contextual questions and get instant answers
-- ⚡ Powered by IBM Watsonx LLM & Embeddings
-- 🧠 Uses ChromaDB for efficient vector storage
-- 🌐 Clean, user-friendly web interface via Gradio
+- 📄 Upload and parse any PDF document  
+- 🤖 Ask contextual questions and get instant answers  
+- ⚡ Powered by IBM Watsonx LLM & Embeddings  
+- 🧠 Uses ChromaDB for efficient vector storage  
+- 🌐 Clean, user-friendly web interface via Gradio  
 
 ---
 
 ## 📁 Directory Structure
 ```
-├── qabot.py
+├── app.py                # Main Gradio UI logic
+├── qabot.py              # Core QA logic using LangChain, IBM Watsonx
+├── requirements.txt      # All necessary Python packages
 ├── assets/
 │   ├── upload_ui.png
 │   ├── question_ui.png
 │   └── answer_ui.png
-├── README.md
-└── requirements.txt
+└── README.md
 ```
 
 ---
@@ -59,52 +60,85 @@ python3.11 -m pip install \
 
 ## 🧠 About the Application Logic
 
-### 1. PDF Parsing
+### 1. PDF Parsing  
 Using `PyPDFLoader` from LangChain Community, the PDFs are loaded and split into chunks of 1000 characters using `RecursiveCharacterTextSplitter`.
 
-### 2. Embedding + Vector Store
+### 2. Embedding + Vector Store  
 Chunks are embedded using `WatsonxEmbeddings` (Slate 125M model) and stored in `ChromaDB` for fast retrieval.
 
-### 3. Retrieval-Based QA
+### 3. Retrieval-Based QA  
 We use LangChain’s `RetrievalQA` chain that combines the retriever with `WatsonxLLM` (Mixtral 8x7B) for inference.
 
 ---
 
 ## 🖥️ Running the App
 
-### Run the bot
+### ▶️ Run Locally
 ```bash
-python qabot.py
+python app.py
 ```
 Then open [AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/) in your browser.
 
 ---
 
+## 🌍 Launch on Hugging Face Spaces (Permanent Hosting)
+
+Deploy your Gradio app to Hugging Face for free with GPU support and a permanent public link:
+
+### 1. Install Hugging Face CLI
+```bash
+pip install huggingface_hub
+```
+
+### 2. Log In to Hugging Face
+```bash
+huggingface-cli login
+```
+Paste your access token from: https://huggingface.co/settings/tokens
+
+### 3. Deploy
+```bash
+gradio deploy
+```
+Follow the prompts to:
+- Name your Space
+- Set it as public
+- Choose a license (e.g., MIT)
+
+✅ This will automatically upload your app to [https://huggingface.co/spaces](https://huggingface.co/spaces)  
+✅ You'll receive a **shareable link** like:
+
+```
+https://huggingface.co/spaces/YourUsername/pdf-qa-agent
+```
+
+---
+
 ## 📸 Screenshots
 
-### 1. Upload PDF
-[[Download a pdf, for convenience here's a pdf you can download on your device]](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/testPDF_A_Comprehensive_Review_of_Low_Rank_Adaptation_in_Large_Language_Models_for_Efficient_Parameter_Tuning-1.pdf)
+### 1. Upload PDF  
+[[Download a PDF for testing →]](https://github.com/ImaadhRenosh/IBM-Certified-DocuMind-QA-AI-Agent-using-RAG-and-LangChain/blob/main/testPDF_A_Comprehensive_Review_of_Low_Rank_Adaptation_in_Large_Language_Models_for_Efficient_Parameter_Tuning-1.pdf)
 
-### 2. Ask Questions
+### 2. Ask Questions  
 <img width="1371" alt="Gradio Interface view" src="https://github.com/user-attachments/assets/6461aefb-98d4-46b7-9ba2-e8a524d9b77d" />
 
-### 3. Receive Answers
+### 3. Receive Answers  
 <img width="1370" alt="Question and answer demo" src="https://github.com/user-attachments/assets/f19effcb-a0d4-45ee-b80e-96631fcd6ff0" />
 
 ---
 
 ## 🤝 How Clients Can Use This
-- Can be deployed as a private/internal document analysis tool
-- Fine-tune on custom PDFs for personalized Q&A
-- Embed into websites with iframe or Gradio share link
+
+- Deploy as an internal document analysis tool  
+- Fine-tune on custom PDFs for company-specific Q&A  
+- Embed in websites via iframe or Hugging Face share link  
 
 ---
 
 ## 🧩 Integrations
-- **Cloud Deployment**: Can be containerized with Docker
-- **Multi-user Support**: Extend with user authentication
-- **Logging**: Add backend logging for questions/answers
+
+- **Cloud Deployment**: Docker-compatible  
+- **Multi-user Support**: Add auth layer  
+- **Logging**: Extend backend to log Q&A sessions  
 
 ---
-
-
