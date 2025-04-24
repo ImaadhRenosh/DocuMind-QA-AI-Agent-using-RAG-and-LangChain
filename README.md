@@ -1,4 +1,4 @@
-# AI-Powered PDF QA Bot with IBM Watsonx, LangChain & Gradio
+# AI-Powered PDF QA AI-Agent with IBM Watsonx, LangChain & Gradio
 
 This repository showcases a production-ready, interactive QA bot that allows users to upload PDF files and ask questions about their content. It's powered by IBM Watsonx foundation models, LangChain, and served through a sleek Gradio interface.
 
@@ -76,7 +76,7 @@ We use LangChain’s `RetrievalQA` chain that combines the retriever with `Watso
 ```bash
 python qabot.py
 ```
-Then open `http://127.0.0.1:7860` in your browser.
+Then open `[AI-Powered PDF QA AI-Agent](https://imaadhrenosh-7860.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/)` in your browser.
 
 ---
 
